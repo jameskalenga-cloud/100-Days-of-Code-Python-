@@ -88,47 +88,80 @@
 
 #Capiltal letter number [65,90], small letter [97,122] number[48,57] special character [33, 46]  use char = chr(ascii_value)
 
-import random
+# import random
 
-print("Welcome to the password generator")
-number_of_password = int(input("How many letters would you like in your password? "))
-number_of_symbol =  int(input("How many Symbols would you like? "))
-numbers = int(input("How many numbers would you like? "))
+# print("Welcome to the password generator")
+# number_of_password = int(input("How many letters would you like in your password? "))
+# number_of_symbol =  int(input("How many Symbols would you like? "))
+# numbers = int(input("How many numbers would you like? "))
 
-if numbers + number_of_symbol <= number_of_password:
-    #Random symbols
-    list_of_symbols = []
-    for index in range(0,number_of_symbol):
-        rand_number = random.randint(33,46)
-        char = chr(rand_number)
-        list_of_symbols.append(char)
+# if numbers + number_of_symbol <= number_of_password:
+#     #Random symbols
+#     list_of_symbols = []
+#     for index in range(0,number_of_symbol):
+#         rand_number = random.randint(33,46)
+#         char = chr(rand_number)
+#         list_of_symbols.append(char)
 
-    #Random numbers
-    list_of_numbers = []
-    for index in range(0,numbers):
-        rand_number = random.randint(48,57)
-        char = chr(rand_number)
-        list_of_numbers.append(char)
+#     #Random numbers
+#     list_of_numbers = []
+#     for index in range(0,numbers):
+#         rand_number = random.randint(48,57)
+#         char = chr(rand_number)
+#         list_of_numbers.append(char)
 
-    number_of_letters = number_of_password - (numbers + number_of_symbol)
-    letters = []
+#     number_of_letters = number_of_password - (numbers + number_of_symbol)
+#     letters = []
 
-    for index in range(0, number_of_letters):
-        random_cap_low =  random.randint(0, 1)
+#     for index in range(0, number_of_letters):
+#         random_cap_low =  random.randint(0, 1)
 
-        if random_cap_low == 1:
-            #Capitals [65,90]
-            rand_number = random.randint(65, 90)
-            char = chr(rand_number)
-            letters.append(char)
-        else:
-            #lower case [97,122]
-            rand_number = random.randint(97, 122)
-            char = chr(rand_number)
-            letters.append(char)
+#         if random_cap_low == 1:
+#             #Capitals [65,90]
+#             rand_number = random.randint(65, 90)
+#             char = chr(rand_number)
+#             letters.append(char)
+#         else:
+#             #lower case [97,122]
+#             rand_number = random.randint(97, 122)
+#             char = chr(rand_number)
+#             letters.append(char)
 
-    total_list = list_of_symbols + list_of_numbers + letters
+#     total_list = list_of_symbols + list_of_numbers + letters
 
-    random.shuffle(total_list)
-    print(total_list)
+#     random.shuffle(total_list)
+#     print(total_list)
 
+
+def calculate_love_score(name1, name2):
+    love_score = [0, 'love']
+    true_score = [0, 'true']
+    
+    for item in name1.lower():
+        if item in true_score[1]:
+            true_score[0] +=1
+
+    for item in name2.lower():
+        if item in true_score[1]:
+            true_score[0] +=1
+
+
+
+
+    for item in name1.lower():
+        if item in love_score[1]:
+            love_score[0] +=1
+
+    for item in name2.lower():
+        if item in love_score[1]:
+            love_score[0] +=1
+
+
+            
+            
+    results = str(true_score[0]) + str(love_score[0])
+    results = int(results)
+    print(results)
+
+
+calculate_love_score("Kanye West", "Kim Kardashian")
