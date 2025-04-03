@@ -133,35 +133,130 @@
 #     print(total_list)
 
 
-def calculate_love_score(name1, name2):
-    love_score = [0, 'love']
-    true_score = [0, 'true']
+# def calculate_love_score(name1, name2):
+#     love_score = [0, 'love']
+#     true_score = [0, 'true']
     
-    for item in name1.lower():
-        if item in true_score[1]:
-            true_score[0] +=1
+#     for item in name1.lower():
+#         if item in true_score[1]:
+#             true_score[0] +=1
 
-    for item in name2.lower():
-        if item in true_score[1]:
-            true_score[0] +=1
+#     for item in name2.lower():
+#         if item in true_score[1]:
+#             true_score[0] +=1
 
+#     for item in name1.lower():
+#         if item in love_score[1]:
+#             love_score[0] +=1
 
-
-
-    for item in name1.lower():
-        if item in love_score[1]:
-            love_score[0] +=1
-
-    for item in name2.lower():
-        if item in love_score[1]:
-            love_score[0] +=1
-
-
-            
-            
-    results = str(true_score[0]) + str(love_score[0])
-    results = int(results)
-    print(results)
+#     for item in name2.lower():
+#         if item in love_score[1]:
+#             love_score[0] +=1
+  
+#     results = str(true_score[0]) + str(love_score[0])
+#     results = int(results)
+#     print(results)
 
 
-calculate_love_score("Kanye West", "Kim Kardashian")
+# calculate_love_score("Kanye West", "Kim Kardashian")
+
+
+# def encode(word,shift, encode_decode):
+    
+#     result = ''
+
+#     for item in word:
+
+#         if encode_decode ==  'encode':
+#             if item == " ":
+#                 ascii = ord(item)
+#             else:
+#                 ascii = ord(item) + shift
+
+#         elif encode_decode == 'decode':
+#             if item == " ":
+#                 ascii = ord(item)
+#             else:
+#                 ascii = ord(item) - shift
+#         print(item)
+#         result += chr(ascii)
+
+
+#     return result
+        
+
+# game_control = True
+
+# while game_control:
+#     encode_decode = input("Type 'encode' to encrypt, type 'decode' to decrypt: ")
+#     message = input('Type your message: ')
+#     shift = int(input('Type the shift number: '))
+
+#     if encode_decode.lower() == 'encode':
+
+#         print(encode(message.lower(), shift, encode_decode))
+#     elif encode_decode.lower() == 'decode':
+
+#         print(encode(message.lower(), shift, encode_decode ))
+
+
+
+
+#     game_continue = input("Type 'yes' if you wanty to go again. Otherwise type 'no'.")
+#     if game_continue.lower() == 'yes':
+#         game_control = True
+#     else:
+#         game_control = False
+
+
+student_scores = {
+    'Harry': 88,
+    'Ron': 78,
+    'Hermione': 95,
+    'Draco': 75,
+    'Neville': 60
+}
+
+student_grades = {}
+
+for item in student_scores:
+    print(item)
+    
+    if student_scores[item] >= 91 and student_scores[item] <=100:
+        student_grades[item] = "Outstanding"
+    elif student_scores[item] >=81 and student_scores[item] <=90:
+        student_grades[item] = "Exceeds Expectations"
+    elif student_scores[item] >=71 and student_scores[item] <=80:
+        student_grades[item] = "Acceptable"
+    elif student_scores[item] <= 70:
+        student_grades[item] = "Fail"
+        
+print(student_grades)
+
+
+
+travel_log = {
+    "France": ["Paris", "Lille", "Dijon"],
+    "Germany":["Stuttgart", "Berlin"]
+
+}
+
+print(travel_log["France"][1])
+
+nested_list = ["A", "B", ["C", "D"]]
+
+print(nested_list[2][1])
+
+
+travel_log = {
+    "France":{
+        "cities_visited": ["Paris", "Lille","Dijon"],
+        "total_visits": 12
+    },
+    "Germany":{
+        "cities_visited": ["Berlin", "Humburg","Stuttgart"],
+        "total_visits": 5
+    }
+}
+
+print(travel_log["Germany"]["cities_visited"][2])
