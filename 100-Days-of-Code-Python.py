@@ -184,7 +184,6 @@
 
 #     return result
         
-
 # game_control = True
 
 # while game_control:
@@ -262,35 +261,54 @@
 # print(travel_log["Germany"]["cities_visited"][2])
 
 
-import random
-print("Welcome to the Number Guessing Game!")
-print("I am thinking of a number between 1 and 100")
-game_mode = input("Choose a difficulty. Type 'easy' or 'hard': ")
+# import random
+# print("Welcome to the Number Guessing Game!")
+# print("I am thinking of a number between 1 and 100")
+# game_mode = input("Choose a difficulty. Type 'easy' or 'hard': ")
 
-game_attepts ={
-    "easy": 10,
-    "hard": 5,
-    "modes": ["Too high", "Too low", "You win", "You lose"]
-}
+# game_attepts ={
+#     "easy": 10,
+#     "hard": 5,
+#     "modes": ["Too high", "Too low", "You win", "You lose"]
+# }
 
-game_control = True
-magic_number = random.randint(1, 100)
-while game_control:
+# game_control = True
+# magic_number = random.randint(1, 100)
+# while game_control:
 
-    print(f"You have {game_attepts[game_mode]} attempts remaining to guess the number.")
-    player_guess = int(input("Make a guess: "))
+#     print(f"You have {game_attepts[game_mode]} attempts remaining to guess the number.")
+#     player_guess = int(input("Make a guess: "))
 
-    if player_guess == magic_number:
-        print(game_attepts["modes"][2])
-        game_control = False
-        continue
-    elif player_guess > magic_number:
-        print(game_attepts["modes"][0])
-    else:
-        print(game_attepts["modes"][1])
+#     if player_guess == magic_number:
+#         print(game_attepts["modes"][2])
+#         game_control = False
+#         continue
+#     elif player_guess > magic_number:
+#         print(game_attepts["modes"][0])
+#     else:
+#         print(game_attepts["modes"][1])
 
-    if game_attepts[game_mode] == 1:
-        game_control = False
-        print(game_attepts["modes"][3])
+#     if game_attepts[game_mode] == 1:
+#         game_control = False
+#         print(game_attepts["modes"][3])
     
-    game_attepts[game_mode] -=1 
+#     game_attepts[game_mode] -=1 
+
+
+#OOP
+
+class User:
+    def __init__(self, user_id, username):
+        self.id = user_id
+        self.username = username
+        self.followers = 0
+        self.following =0
+
+    def follow(self, user):
+        user.followers += 1
+        self.following += 1
+
+
+user1 = User("001", "James")
+
+print(user1.id)
