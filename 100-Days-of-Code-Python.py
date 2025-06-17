@@ -297,18 +297,37 @@
 
 #OOP
 
-class User:
-    def __init__(self, user_id, username):
-        self.id = user_id
-        self.username = username
-        self.followers = 0
-        self.following =0
+# class User:
+#     def __init__(self, user_id, username):
+#         self.id = user_id
+#         self.username = username
+#         self.followers = 0
+#         self.following =0
 
-    def follow(self, user):
-        user.followers += 1
-        self.following += 1
+#     def follow(self, user):
+#         user.followers += 1
+#         self.following += 1
 
 
-user1 = User("001", "James")
+# user1 = User("001", "James")
 
-print(user1.id)
+# print(user1.id)
+
+
+# numbers = [1,2,3]
+
+# new_list = [item + 1 for item in numbers]
+# print(new_list)
+
+
+
+
+
+# new_list = [index *2 for index in range(1,5)]
+# print(new_list)
+
+
+# names = ["Alex", "Beth", "Caroline", "Dave", "Eleanor", "Freddie"]
+
+# new_names_list = [name.upper() for name in names if len(name) > 5]
+# print(new_names_list)
