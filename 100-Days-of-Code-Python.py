@@ -331,3 +331,69 @@
 
 # new_names_list = [name.upper() for name in names if len(name) > 5]
 # print(new_names_list)
+
+
+# def add (*args):
+#     total= 0
+#     for item in args:
+#         total += item
+
+#     print(total)
+
+
+
+# add(1,2,3)
+
+
+
+# working with api
+
+# import requests
+
+# response = requests.get(url="http://api.open-notify.org/iss-now.json")
+# data =  response.json()
+
+# print(data)
+
+# params = {
+#     "lat": -10000,
+#     "long": 12566
+# }
+
+# import requests
+
+# response = requests.get(url="api.openweathermap.org/data/2.5/forecast", params= params)
+
+# data = response["list"]
+
+# for item in data:
+#     data1 = item["weather"]["id"]
+
+
+
+# list_names = ["James", "work", "interlect", "midrand", "Santie"]
+# list_numbers = [1,20,3,100,-1]
+
+# max_ = max(list_numbers)
+
+# index = list_numbers.index(max_)
+
+# print(index, list_names[index])
+
+# learning about beautiful soup this is a method of reading html into the code aka scraping
+
+from bs4 import BeautifulSoup
+import requests
+
+header = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:131.0) Gecko/20100101 Firefox/131.0"}
+url = "https://www.incredible.co.za/techpro-incubus-high-back-gaming-chair-blue" 
+response = requests.get(url=url, headers=header)
+
+soup = BeautifulSoup(response.text, 'html.parser')
+save_chair = (soup.find('span', class_='price').getText().split()[1])
+
+Target = 1000
+
+if save_chair >= Target:
+    print("Go buy the chair")
+
