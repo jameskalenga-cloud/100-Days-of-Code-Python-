@@ -1,0 +1,9 @@
+this is aka the shell
+
+
+pwd print working directory 
+ls list
+cd change directory
+mkdir make directory 
+touch make.py  this create a file 
+rm -rf main.py this removed the main file

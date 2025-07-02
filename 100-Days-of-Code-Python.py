@@ -382,18 +382,21 @@
 
 # learning about beautiful soup this is a method of reading html into the code aka scraping
 
-from bs4 import BeautifulSoup
-import requests
 
-header = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:131.0) Gecko/20100101 Firefox/131.0"}
-url = "https://www.incredible.co.za/techpro-incubus-high-back-gaming-chair-blue" 
-response = requests.get(url=url, headers=header)
+# buy this chair 
+# from bs4 import BeautifulSoup
+# import requests
 
-soup = BeautifulSoup(response.text, 'html.parser')
-save_chair = (soup.find('span', class_='price').getText().split()[1])
+# header = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:131.0) Gecko/20100101 Firefox/131.0"}
+# url = "https://www.incredible.co.za/techpro-incubus-high-back-gaming-chair-blue" 
+# response = requests.get(url=url, headers=header)
 
-Target = 1000
+# soup = BeautifulSoup(response.text, 'html.parser')
+# save_chair = (soup.find('span', class_='price').getText().split()[1])
 
-if save_chair >= Target:
-    print("Go buy the chair")
+# Target = 1000
 
+# if save_chair >= Target:
+#     print("Go buy the chair")
+
+# Python decorators 
