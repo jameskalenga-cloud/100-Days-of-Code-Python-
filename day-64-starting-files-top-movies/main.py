@@ -21,7 +21,7 @@ pip3 install -r requirements.txt
 This will install the packages from requirements.txt for this project.
 '''
 
-API_KEY  = "098aaf803ef5a922752a4f143a20df41"
+
 BASE_URL = "https://api.themoviedb.org/3/search/movie"
 BASE_URL_SINGLE = 'https://api.themoviedb.org/3'
 
