@@ -7,3 +7,10 @@ cd change directory
 mkdir make directory 
 touch make.py  this create a file 
 rm -rf main.py this removed the main file
+
+
+--------------------->  Web design  <--------------------------- 
+color theory ---> please use colorhunt
+
+always use two types of fonts 
+Daily UI ----> look at this 
